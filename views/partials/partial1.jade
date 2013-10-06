@@ -1,0 +1,20 @@
+h2 Feed
+div(ng-controller="FeedController")
+    .item(ng-repeat="item in feed")
+      .row
+          .col-md-1
+             img(ng-src="{{item.mugshot_url}}")
+          .col-md-5
+             div(class="authorname")
+               {{item.sender_name}}
+
+             div(class="updatetext")
+               {{item.text}}
+
+      .row.item(ng-repeat="reply in item.replies")
+        .col-md-1.col-md-offset-1
+            img(ng-src="{{reply.mugshot_url}}")
+        .col-md-3
+             .authorname {{reply.sender_name}}
+             .updatetext {{reply.text}}
+

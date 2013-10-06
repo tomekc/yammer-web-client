@@ -1,0 +1,19 @@
+<h2>Feed</h2>
+<div ng-controller="FeedController">
+    <div ng-repeat="item in feed" class="item">
+        <div class="row">
+            <div class="col-md-1"><img ng-src="{{item.mugshot_url}}"/></div>
+            <div class="col-md-5">
+                <div class="authorname">{{item.sender_name}}</div>
+                <div class="updatetext">{{item.text}}</div>
+            </div>
+        </div>
+        <div ng-repeat="reply in item.replies" class="row item">
+            <div class="col-md-1 col-md-offset-1"><img ng-src="{{reply.mugshot_url}}"/></div>
+            <div class="col-md-3">
+                <div class="authorname">{{reply.sender_name}}</div>
+                <div class="updatetext">{{reply.text}}</div>
+            </div>
+        </div>
+    </div>
+</div>

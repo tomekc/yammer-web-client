@@ -1,0 +1,13 @@
+/* app css stylesheet */
+
+body {
+  padding-top:70px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.authorname {
+    font-weight: bold;
+}
